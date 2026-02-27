@@ -101,7 +101,7 @@ const Hero = () => {
 <div className="flex justify-center lg:justify-end items-center relative mt-8 lg:mt-0">
   <div className="relative">
     <img 
-      src="/lovable-uploads/WhatsApp_Image_2025-09-22.jpg.jpg" 
+      src="/uploads/WhatsApp_Image_2025-09-22.jpg.jpg" 
       alt="Sujal Fuldevare - Portfolio Photo" 
       className="
         w-56 sm:w-64 md:w-72 lg:w-80 
