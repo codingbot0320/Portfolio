@@ -82,7 +82,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: <Github className="w-5 h-5" />, label: "GitHub", link: "https://github.com/codingbot0320" },
     { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", link: "https://www.linkedin.com/in/sujal-fuldevare-aa22912a9" },
-    { icon: <Instagram className="w-5 h-5" />, label: "Instagram", link: "https://www.instagram.com/sujal_0320/" }
+    { icon: <Instagram className="w-5 h-5" />, label: "Instagram", link: "https://www.instagram.com/sujalfuldevare/" }
   ];
 
   return (
