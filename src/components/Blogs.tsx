@@ -150,48 +150,71 @@ const Blogs = ({ showAll = false }: { showAll?: boolean }) => {
           </div>
         )}
 
-        {/* Newsletter Signup - Only show on blog page */}
-        {showAll && (
-          <div className="max-w-2xl mx-auto fade-in-delay-3">
-            <Card className="glass-card border-white/10">
-              <CardHeader className="text-center">
-                <h3 className="text-2xl font-bold mb-2">
-                  Subscribe to <span className="gradient-text">Newsletter</span>
-                </h3>
-                <p className="text-text-secondary">
-                  Get the latest insights on web development, design trends, and tech innovations delivered to your inbox.
-                </p>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 bg-background/50 border-white/20 focus:border-primary"
-                  />
-                  <Button
-                    className="btn-hero sm:w-auto"
-                    onClick={() => {
-                      if (email) {
-                        console.log("Newsletter signup:", email);
-                        setEmail("");
-                        // Add your newsletter signup logic here
-                      }
-                    }}
-                  >
-                    Subscribe
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
-                <p className="text-xs text-text-muted text-center">
-                  No spam ever. Unsubscribe anytime.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        )}
+      {/* Newsletter Signup - Only show on blog page */}
+{showAll && (
+  <div className="max-w-2xl mx-auto fade-in-delay-3">
+    <Card className="glass-card border-white/10">
+      <CardHeader className="text-center">
+        <h3 className="text-2xl font-bold mb-2">
+          Subscribe to <span className="gradient-text">Newsletter</span>
+        </h3>
+        <p className="text-text-secondary">
+          Get the latest insights on web development, design trends, and tech innovations delivered to your inbox.
+        </p>
+      </CardHeader>
+
+      <CardContent className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Input
+            type="email"
+            placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 bg-background/50 border-white/20 focus:border-primary"
+          />
+          <Button
+            className="btn-hero sm:w-auto flex items-center justify-center"
+            onClick={async () => {
+              if (!email) {
+                alert("Please enter your email address.");
+                return;
+              }
+
+              try {
+                const formData = new FormData();
+                formData.append("EMAIL", email);
+
+                // 📨 Your Mailchimp form action URL
+                const response = await fetch(
+                  "https://gmail.us14.list-manage.com/subscribe/post?u=bdfc3e76ecd844eeeb32020d3&id=f6ae974abf&f_id=0089ede0f0",
+                  {
+                    method: "POST",
+                    body: formData,
+                    mode: "no-cors", // Important to avoid CORS blocking
+                  }
+                );
+
+                alert("🎉 Thank you for subscribing!");
+                setEmail("");
+              } catch (error) {
+                console.error("Subscription error:", error);
+                alert("Something went wrong. Please try again later.");
+              }
+            }}
+          >
+            Subscribe
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Button>
+        </div>
+
+        <p className="text-xs text-text-muted text-center">
+          No spam ever. Unsubscribe anytime.
+        </p>
+      </CardContent>
+    </Card>
+  </div>
+)}
+
       </div>
     </section>
   );

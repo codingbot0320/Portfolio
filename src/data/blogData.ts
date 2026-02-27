@@ -21,9 +21,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "The Future of Web Design: Trends to Watch in 2024",
+    title: "The Future of Web Design: Trends to Watch in 2025",
     excerpt: "Exploring the latest design trends that are shaping the future of web development, from AI integration to immersive experiences.",
-    date: "2024-01-15",
+    date: "2025-01-15",
     category: "Design",
     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80",
     tags: ["Web Design", "UI/UX", "Trends"],
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The web design landscape is constantly evolving, and 2024 promises to bring exciting new trends that will reshape how we create digital experiences. As technology advances and user expectations grow, designers and developers must stay ahead of the curve.'
+        text: 'The web design landscape is constantly evolving, and 2025 promises to bring exciting new trends that will reshape how we create digital experiences. As technology advances and user expectations grow, designers and developers must stay ahead of the curve.'
       },
       {
         type: 'subheading',
@@ -100,9 +100,9 @@ export const blogPosts: BlogPost[] = [
     id: 2,
     title: "Building Responsive Websites: A Complete Guide",
     excerpt: "Learn how to create websites that look and work perfectly on all devices. A comprehensive guide to responsive design principles.",
-    date: "2024-01-10",
+    date: "2024-08-10",
     category: "Development",
-    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&q=80",
+    image: "https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/8103728/985514_372023.png",
     tags: ["Responsive", "CSS", "Mobile"],
     readTime: "8 min read",
     author: {
@@ -182,7 +182,7 @@ export const blogPosts: BlogPost[] = [
     id: 3,
     title: "The Art of Color in Digital Design",
     excerpt: "Understanding color theory and psychology in digital design. How to choose the perfect color palette for your next project.",
-    date: "2024-01-05",
+    date: "2024-03-05",
     category: "Design",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
     tags: ["Color Theory", "Design", "Psychology"],
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
     id: 4,
     title: "My Journey as a Freelance Developer",
     excerpt: "From student to successful freelancer - sharing my experiences, challenges, and lessons learned along the way.",
-    date: "2023-12-28",
+    date: "2024-04-28",
     category: "Personal",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
     tags: ["Freelancing", "Career", "Tips"],
@@ -318,7 +318,7 @@ export const blogPosts: BlogPost[] = [
     id: 5,
     title: "JavaScript Best Practices for Modern Development",
     excerpt: "Essential JavaScript patterns and practices that every developer should know to write clean, maintainable code.",
-    date: "2023-12-20",
+    date: "2024-12-20",
     category: "Development",
     image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&q=80",
     tags: ["JavaScript", "Best Practices", "Code Quality"],
